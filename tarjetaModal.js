@@ -7,19 +7,17 @@ fetch(url)
     .then(matrizApi =>{       
         for(var i=0; i<matrizApi.length; i+=1){
         cardex.innerHTML += `
-            <div class="row">
-                <div class="col-md-4">
-                <div class="card">
-                <div class="card-block">           
-                    <div class="card-body"><strong>Usuario: ${matrizApi[i].userId},  id: ${matrizApi[i].id}</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title">${matrizApi[i].title}</h5>
-                            <br>                          
-                            <button type="button" class="btn btn-primary" onclick='miModal(${matrizApi[i].userId}, ${matrizApi[i].id})' data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button>   
-                            <button type="button" class="btn btn-warning" onclick='misFavoritos(${matrizApi[i].userId}, ${matrizApi[i].id})' data-bs-toggle="modal" data-bs-target="#example2Modal">Añadir a Favoritos</button>
+            
+            <div class="col">
+                <div class="card">           
+                        <div class="card-body"><strong>Usuario: ${matrizApi[i].userId},  id: ${matrizApi[i].id}</strong></div>
+                            <div class="card-body">
+                                <h5 class="card-title">${matrizApi[i].title}</h5>
+                                <br>                          
+                                <button type="button" class="btn btn-primary" onclick='miModal(${matrizApi[i].userId}, ${matrizApi[i].id})' data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button>   
+                                <button type="button" class="btn btn-warning" onclick='misFavoritos(${matrizApi[i].userId}, ${matrizApi[i].id})' data-bs-toggle="modal" data-bs-target="#example2Modal">Añadir a Favoritos</button>
                             </div>            
-                </div>
-                </div>
+                        </div>
                 </div>
 
             </div>
